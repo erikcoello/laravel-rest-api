@@ -46,4 +46,4 @@ Route::get('/balance', 'BalanceController@show');
 ## Transfer from non-existing account
 //POST /event {"type":"transfer", "origin":"200", "amount":15, "destination":"300"}
 //404 0
-Route::get('/event', 'EventController@store');
+Route::post('/event', 'EventController@store');
