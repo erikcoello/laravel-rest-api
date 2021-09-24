@@ -21,13 +21,13 @@ class EventController extends Controller
                 $request->input('origin'),
                 $request->input('amount')
             );
-        } /* elseif ($request->input('type') === 'transfer') {
+        }  elseif ($request->input('type') === 'transfer') {
             return $this->transfer(
                 $request->input('origin'),
                 $request->input('destination'),
                 $request->input('amount')
             );
-        } */
+        }
     }
     private function deposit($destination, $amount)
     {
@@ -56,7 +56,7 @@ class EventController extends Controller
                 'balance' => $account->balance
             ]
             ], 201);
-    }/*
+    }
     private function transfer($origin, $destination, $amount)
     {
         $accountOrigin = Account::findOrFail($origin);
@@ -84,6 +84,6 @@ class EventController extends Controller
         ],201);
 
 
-    } */
+    }
 
 } //final clase
